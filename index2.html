@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="kontainer">
+        <div class="kontainer-gambar">
+            <img src="Images/anjing.png" alt="">
+            <img src="Images/ayam.png" alt="">
+            <img src="Images/badak.png" alt="">
+            <img src="Images/beruang.png" alt="">
+            <img src="Images/buaya.png" alt="">
+            <img src="Images/elang.png" alt="">
+            <img src="Images/gajah.png" alt="">
+            <img src="Images/hamster.png" alt="">
+            <img src="Images/hantu.png" alt="">
+            <img src="Images/harimau.png" alt="">
+            <img src="Images/kadal.png" alt="">
+            <img src="Images/kakaktua.png" alt="">
+            <img src="Images/kambing.png" alt="">
+            <img src="Images/komodo.png" alt="">
+            <img src="Images/kucing.png" alt="">
+            <img src="Images/kuda.png" alt="">
+            <img src="Images/kura.png" alt="">
+            <img src="Images/lumba.png" alt="">
+            <img src="Images/orca.png" alt="">
+            <img src="Images/pinguin.png" alt="">
+            <img src="Images/sapi.png" alt="">
+            <img src="Images/ular.png" alt="">
+            <img src="Images/unta.png" alt="">
+            <img src="Images/zebra.png" alt="">
+        </div>
+
+        <img src="Images/anjing.png" alt="" id="display" class="display">
+        
+        <button id="button" readonly >Your Choice</button>
+        
+        
+    </div>
+
+<script>
+    const pilihan = document.getElementById("pilihan");
+    const display = document.getElementById("display");
+    const button = document.getElementById("button");
+    const gambars = document.querySelectorAll("img");
+
+    let data = window.location.search;
+    let params = new URLSearchParams(data);
+
+    // document.getElementById("write").innerHTML = params.get("nama");
+
+    display.src="Images/"+params.get("pilihan");
+
+    for (let i = 0; i < gambars.length-1; i++) {
+        let element = gambars[i];
+        element.addEventListener("click", myfunction);
+        function myfunction(){
+            element.src="Images/"+(gambars[i].src).replace(/^.*[\\\/]/,'').split(".")[0]+"-silang.png";
+        }
+    }
+
+    
+</script>
+</body>
+</html>

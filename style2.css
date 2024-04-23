@@ -1,0 +1,19 @@
+.display {
+    border: 10px solid red;
+    margin-bottom: 0;
+}
+
+.display {
+    margin-top: 25px;
+}
+
+
+button {
+    width: 219px;
+    height: 35px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: red;
+    border: none;
+    color: white;
+}
